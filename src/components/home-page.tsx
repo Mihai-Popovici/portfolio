@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import useLocalStorage from "use-local-storage";
+import Projects from './projects';
 
 export default function Home()  {
 
@@ -54,15 +55,17 @@ export default function Home()  {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="pl-5 py-0 pr-3 backdrop-blur-3xl overflow-hidden flex flex-row justify-center">
-          <ScrollArea className="h-full max-w-4xl pt-0">
-            <div className="grid grid-cols-1 gap-5 mr-5 my-5">
+        <CardContent className="p-0 backdrop-blur-3xl overflow-hidden flex flex-row justify-center">
+          <ScrollArea className="h-full w-full pt-0">
+            <div className='flex flex-row justify-center'>
+            <div className="grid grid-cols-1 gap-5 my-5 max-w-4xl">
               <AboutMe
                 title={webContent.aboutMe[language]}
                 content={webContent.aboutMeDescription[language]}
               />
               <Skills title={webContent.techTitle[language]} tech={webContent.tech}/>
-              <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+              <Projects title={webContent.projectsTitle[language]} techTitle={webContent.techTitle[language]} projects={webContent.projects} language={language}/>
+            </div>
             </div>
           </ScrollArea>
         </CardContent>

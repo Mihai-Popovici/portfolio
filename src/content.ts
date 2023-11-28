@@ -107,6 +107,37 @@ export const webContent:Record<string, any> = {
       imgUrl:'https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg'
     }
   ],
+  projectsTitle: {
+    ro: 'Proiecte',
+    es: 'Proyectos',
+    en: 'Projects'
+  },
+  projects:[
+    {
+      name:'Picofix',
+      description:{
+        ro:'Am făcut această aplicație pentru propria mea firmă de construcții pentru ca, în viitor, să public fotografii ale lucrărilor efectuate și să o folosesc pentru a câștiga mai mulți clienți.',
+        es:'Hice esta aplicación para mi propia empresa de construcción con el fin de, en el futuro, publicar fotos de trabajos realizados y utilizarla para conseguir más clientes.',
+        en:'I made this application for my own construction company in order to, in the future, publish photos of work done and use it to gain more customers.',
+      },
+      url:'https://www.picofix.ro/',
+      tech:[
+        'Next.js', 'Tailwind', 'Three.js'
+      ]
+    },
+    {
+      name:'TodoApp',
+      description:{
+        ro:'În timp ce făceam cursul Udemy. Am făcut o aplicație care folosea node.js + Express.js pentru backend și ejs pentru template-uri. Pentru baza de date am folosit mongodb, iar pentru front-end am folosit bootstrap și css.',
+        es:'Mientras hacía el curso Udemy. Hice una aplicación todo que utiliza node.js + Express.js para el backend y ejs para plantillas. Para la base de datos usé mongodb y para el front-end usé bootstrap y css.',
+        en:'While doing the Udemy course. I did a todo app that used node.js + Express.js for the backend and ejs for templating. For the database I used mongodb and for the front end I used bootstrap and css.',
+      },
+      url:'https://todoapp-g4jy.onrender.com/',
+      tech:[
+        'Bootstrap', 'mongoDB', 'Node.js', 'Express.js'
+      ]
+    }
+  ],
   changeTheme: {
     ro: 'Schimbă tema',
     es: 'Cambia el tema',
