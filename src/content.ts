@@ -122,7 +122,7 @@ export const webContent:Record<string, any> = {
       },
       url:'https://www.picofix.ro/',
       tech:[
-        'Next.js', 'Tailwind', 'Three.js'
+        'Next.js', 'Tailwind', 'Three.js', 'JavaScript'
       ]
     },
     {
