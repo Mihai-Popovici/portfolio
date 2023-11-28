@@ -7,24 +7,24 @@ import {
 } from '@/components/ui/card';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 
-export default function Skills() {
+export default function Skills(props:any) {
   const m = Array(5).fill('');
   return (
     <Card className="">
       <CardHeader>
-        <CardTitle>Skills</CardTitle>
+        <CardTitle>{props.title}</CardTitle>
       </CardHeader>
       <CardContent className="pb-3">
         <ScrollArea className="w-full">
           <div className="flex pb-5">
-            {m.map((v, i) => (
-              <Card key={i} className="mr-5 w-52 h-full">
+            {props.tech.map((tech:any, i:number) => (
+              <Card key={i} className="mr-5 w-36 h-full">
                 <CardContent className="h-full flex flex-col items-center p-5">
                   <img
-                    className="h-10 mb-5"
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                    className={`h-10 mb-5 px-1 ${tech?.class}`}
+                    src={tech.imgUrl}
                   ></img>
-                  JavaScript
+                  {tech.name}
                 </CardContent>
               </Card>
             ))}

@@ -21,16 +21,9 @@ const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const theme = useTheme();
-  let bg = '';
-  if(theme?.theme === 'light'){
-    bg='bg-white'
-  }else{
-    bg='bg-black'
-  }
   return (<div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6 bg-opacity-25", bg, className)}
+    className={cn("flex flex-col space-y-1.5 p-6 bg-background", className)}
     {...props}
   />)
 })
@@ -43,7 +36,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "lg:text-2xl md:text-lg text-base font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
@@ -67,14 +60,7 @@ const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const theme = useTheme();
-  let bg = '';
-  if(theme?.theme === 'light'){
-    bg='bg-white'
-  }else{
-    bg='bg-black'
-  }
-  return (<div ref={ref} className={cn("p-6 pt-0 bg-opacity-25", bg, className)} {...props} />)
+  return (<div ref={ref} className={cn("p-6 pt-0 bg-background lg:text-base md:text-sm text-xs", className)} {...props} />)
 })
 CardContent.displayName = "CardContent"
 
@@ -82,16 +68,9 @@ const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const theme = useTheme();
-  let bg = '';
-  if(theme?.theme === 'light'){
-    bg='bg-white'
-  }else{
-    bg='bg-black'
-  }
   return (<div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0 bg-opacity-25", bg, className)}
+    className={cn("flex items-center p-6 pt-0 bg-background", className)}
     {...props}
   />)
 })

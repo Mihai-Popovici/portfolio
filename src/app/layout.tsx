@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactElement;
+  children: React.ReactElement;  
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+            {children}
         </ThemeProvider>
       </body>
     </html>
